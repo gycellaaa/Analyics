@@ -82,12 +82,14 @@ Step 4. Add a conditional column to transform the Discount Band to the Discount 
 Step 5. In order to find out the find out the total net sales amount, we need to calculate the Total Gross Sales amount. I use the Custom Column option to add a new column to multiply the Order Quantity and the Item Price in the sales data. 
 
 Step 6. Create a column to calculate the Discount band Multiplied with the Total Gross Sales amount. 
-Named the column of this multiplication as Discount Total" = 
-Total Gross Sale= [Total Gross Sale] *[Discount Band Percentage]
+Named the column of this multiplication as 
+    
+    "Discount Total" = Total Gross Sale= [Total Gross Sale] *[Discount Band Percentage]
 
 Step 7.  Finally, The Total Net Sales across the total Gross Sales and the Discount Total for all rows in the table. 
-The formula to calculate the Total Net Sale(s) amount using the Measure function
-Total Net Sales = SUM('Sales Data'[Total Gross Sales]) - SUM('Sales Data'[Discount Total])
+The formula to calculate the Total Net Sale(s) amount using the Measure function: 
+
+    Total Net Sales = SUM('Sales Data'[Total Gross Sales]) - SUM('Sales Data'[Discount Total])
 
 * Description 
 The visualisation displays a clustered bar chart “Top 3 stores according to their total net sales”, 
@@ -115,8 +117,8 @@ Since this visual contains many datasets, I decided that it is efficient to prov
 Step 1. Changed the name of the column: admin_name to States, for a better indication of the states. 
 
 Step 2. Created the new column for the Total Net Sale of each product to enable Sales Median calculation (this is different with the Total Net Sale(s) since the Total Net Sale only focus each product’s net sales instead of the net sales across all of the summed up net sales and all summed up discount total)
-   
-   #### Total Net Sale = [Total Gross Sales]-[Discount Total]
+
+    Total Net Sale = [Total Gross Sales]-[Discount Total]
 
 Step 3. Created a new measure for the Sales Median 
 

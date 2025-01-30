@@ -54,7 +54,29 @@ HI
 
 
 
+## Dashboards answers to respective questions
+[1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?]( What-are-the-top 3 stores by total net sales amount for each of the years 2021-2022?
+)  
 
+ [2. Are there months in which sales of a particular product in  any of the states are significantly higher than others?](#methodology)  
+
+ [3. Which sales team has the highest profit margin?](#results)  
+
+ [4. Which warehouse(s) should be shut down?](#which-warehouse(s)-should-be-shut-down?)
+
+[ 5. Do cities with a higher population have higher profit?](#conclusion)
+
+
+
+# What are the top 3 stores by total net sales amount for each of the years 2021-2022?
+
+# Are there months in which sales of a particular product in  any of the states are significantly higher than others?
+
+# Which sales team has the highest profit margin?
+
+# Which warehouse(s) should be shut down?
+
+# Do cities with a higher population have higher profit?
 
 - Step 1 : Load data into Power BI Desktop, dataset is a csv file.
 - Step 2 : Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options.

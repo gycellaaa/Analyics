@@ -40,13 +40,13 @@ HI
 
 ### B. Write an explanation of how your visualisation (or visualisations) addresses each of the questions (i.e., five explanations of no more than 1 page each). 
        
-    You should include a screenshot (or screenshots) of your visualisation(s) for the question and refer to it/them in your explanation.
-    Note that screenshots do not count toward the 1 page for that question. If you make any assumptions about the question, you should list and explain them here. Your visualisation(s) should be included as part of the explanation.
+    Include a screenshot of your visualisation(s) for the question and refer to it/them in your explanation.
 
 ### C. Write an explanation of your data transformation process. 
     
-    It should include details of any changes you make to the structure of the original dataset and any additional columns or measures you create to complete the analyses. 
-    The length of this section will depend on the number and nature of changes you make; however, explanation of each transformation should be no more than ½ page, not including any screenshots. 
+    It should include details of any changes you make to the structure of the original dataset
+     and any additional columns or measures you create to complete the analyses. 
+
     Please note, this is focused on your data transformation, not the processes for creating your visualisations.
     
 ### Raw Data Spreadsheet link : 

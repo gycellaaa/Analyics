@@ -49,33 +49,32 @@ HI
 
     Please note, this is focused on your data transformation, not the processes for creating your visualisations.
     
-### Raw Data Spreadsheet link : 
-[https://curtin-my.sharepoint.com/:x:/r/personal/21569498_student_curtin_edu_au/Documents/Sales%20Orders.xlsx?d=w475def7f80b64d3aa2981c793f059db9&csf=1&web=1&e=pkHKyO]
+*
+    [The Raw Data Spreadsheet link](https://curtin-my.sharepoint.com/:x:/r/personal/21569498_student_curtin_edu_au/Documents/Sales%20Orders.xlsx?d=w475def7f80b64d3aa2981c793f059db9&csf=1&web=1&e=pkHKyO) 
 
 
 
 
 ## Analysis to address the respective questions
+[The Power BI File link](https://github.com/gycellaaa/Analyics/blob/main/A2_PowerBI.pbix)
 
-[The Power BI File](https://github.com/gycellaaa/Analyics/blob/main/A2_PowerBI.pbix)
-
-[1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?]( What-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021-2022?)  
-
-## Table of Contents
-- [1. What are the top 3 stores by total net sales amount for each of the years 2021?](#1-what-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021)
-- [2. Are there months in which sales of a particular product in any of the states are significantly higher than others?](#2-are-there-months-in-which-sales-of-a-particular-product-in-any-of-the-states-are-significantly-higher-than-others)
-- [3. Which sales team has the highest profit margin?](#3-which-sales-team-has-the-highest-profit-margin)
-- [4. Which warehouse(s) should be shut down?](#4-which-warehouses-should-be-shut-down)
-- [5. Do cities with a higher population have higher profit?](#5-do-cities-with-a-higher-population-have-higher-profit)
+- [What are the top 3 stores by total net sales amount for each of the years 2021?](#1-what-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021)
+- [Are there months in which sales of a particular product in any of the states are significantly higher than others?](#2-are-there-months-in-which-sales-of-a-particular-product-in-any-of-the-states-are-significantly-higher-than-others)
+- [Which sales team has the highest profit margin?](#3-which-sales-team-has-the-highest-profit-margin)
+- [Which warehouse(s) should be shut down?](#4-which-warehouses-should-be-shut-down)
+- [Do cities with a higher population have higher profit?](#5-do-cities-with-a-higher-population-have-higher-profit)
 
 ## 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
 
 * Visualisation
+
 ![1. What are the top 3 stores by total net sales amount for each of the year 2021](https://github.com/user-attachments/assets/cd2b6b5d-61fa-45ce-a19b-4916b9469bd4) 
+
 
 ![1.2. What are the top 3 stores by total net sales amount for each of the year 2022?](https://github.com/user-attachments/assets/0f5b6f7f-ad81-4c15-8b4c-676197ff3194)
 
 * Steps
+
 Step 1.	Delete the irrelevant columns: 1.2 lat, 1.2 lng, iso2, iso 3, and ID. The ID doesn't represent stores id
 
 Step 2.	renamed column 1 = to be stores ID, as data scanned from the Store_ID in the Sales Data makes more sense. 
@@ -93,11 +92,12 @@ Named the column of this multiplication as
     "Discount Total" = Total Gross Sale= [Total Gross Sale] *[Discount Band Percentage]
 
 Step 7.  Finally, The Total Net Sales across the total Gross Sales and the Discount Total for all rows in the table. 
-The formula to calculate the Total Net Sale(s) amount using the Measure function: 
+The formula to calculate the Total Net Sale(s) amount using the DAX expression: 
 
     Total Net Sales = SUM('Sales Data'[Total Gross Sales]) - SUM('Sales Data'[Discount Total])
 
 * Description 
+
 The visualisation displays a clustered bar chart “Top 3 stores according to their total net sales”, 
 as well as a slicer that consists the options of the year 2021 and 2022.
 The option for Clustered bar chart for this specific analysis is to mainly promotes comparison of the total net sales made by the different stores. 
@@ -105,38 +105,34 @@ Each column’s length corresponds to the net sales amount, and the additonal va
 When one of the slicer’s year option is chosen, it enabels simple comparison of the total net sales made by the three stores within the dedicated year.
 With an integrated tooltip as a storytelling function that provides a compact view of the store, net sales and the year when navigating through specific value. Not only is assists with data filter, it provides a straightforward user-friendly interface for data exploration. It functions to tell a story and guide the reader for quick data-driven decison making. 
 
-* Example analysis 
-The three stores of the year 2021 is:  Canberra with net sales of 294k, Lanceston store with net sales of 302k, Toowomba with net sales of 298k.
+* Assumption
 
-* Assumption: 
 Additonally, I have decided to refer the store name by it’s City, since each Store ID is column from Store data is dedicated to their different cities. Not only it would be more human-readable, 
 the reference to the city would also enable further analysation of which store of the city has made the total net sales from.
+
+* Example analysis
+
+The three stores of the year 2021 is:  Canberra with net sales of 294k, Lanceston store with net sales of 302k, Toowomba with net sales of 298k.
 
 ## 2. Are there months in which sales of a particular product in any of the states are significantly higher than others?
 
 Since this visual contains many datasets, I decided that it is efficient to provide one of the scenario analysis. 
 
 * Visualisation 
+
 ![2. Are there months in which sales of a particular product in  any of the states are significantly higher than others?](https://github.com/user-attachments/assets/7b8d83f7-8ac2-4aee-bb14-b406d208ad3c)
 
 * Steps 
+
 Step 1. Changed the name of the column: admin_name to States, for a better indication of the states. 
 
 Step 2. Created the new column for the Total Net Sale of each product to enable Sales Median calculation (this is different with the Total Net Sale(s) since the Total Net Sale only focus each product’s net sales instead of the net sales across all of the summed up net sales and all summed up discount total)
 
     Total Net Sale = [Total Gross Sales]-[Discount Total]
 
-Step 3. Created a new measure for the Sales Median 
+Step 3. Created a new DAX expression for the Sales Median 
 
     Sales Median = CALCULATE(MEDIAN('Sales Data'[Total Net Sale]))
-
-* Example analysis: 
-Assuming that the reader wants to check the Accessories net sales of the state Queensland in the year 2022 as well as comparing the Accessories sales with the Bar Tools sales. 
-
-From this analysis, we can conclude that the Accessories sales the Queensland state does not make sales from January to May. 
-However, there’s significant sales from the month of December by 10.3k, and made more sales by 8.6k compared to the other months. 
-While the month of November made only 5.6k sales and less sales by 2.6k compared to the rest of the month’s performance. 
-Additionally, the Bar Tool sales in June, July and October is higher than the sales of Accessories. 
 
 * Explanation 
 
@@ -152,39 +148,53 @@ And lastly a slicer for reader to navigate through the various states.
 
 Additionally, the tooltip function is used to indicate the month, product name, and total sales when navigating through specific point of chart after all the slicer options are chosen.
 
-* Assumption:
+* Assumption
+
 Assuming that the total net sales median would be used for the stakeholders as further analysis when comparing through the specific product’s total net sales in the chosen year (that indicates the sales of the months), with the product’s total net sales from the rest of the months performance. Further the decision making based on the given performance of specific product’s particular year with the performance for the rest of the years. 
 
 The question does not indicate the year of requested months, therefore I decided to add the slicer to choose the specific year’s months. This enable more and complete analysis given the whole data. 
 
+* Example analysis
 
+Assuming that the reader wants to check the Accessories net sales of the state Queensland in the year 2022 as well as comparing the Accessories sales with the Bar Tools sales. 
+
+From this analysis, we can conclude that the Accessories sales the Queensland state does not make sales from January to May. 
+However, there’s significant sales from the month of December by 10.3k, and made more sales by 8.6k compared to the other months. 
+While the month of November made only 5.6k sales and less sales by 2.6k compared to the rest of the month’s performance. 
+Additionally, the Bar Tool sales in June, July and October is higher than the sales of Accessories. 
 
 
 ## 3. Which sales team has the highest profit margin?
 
 * Visualisation
+
 ![3. Which sales team has the highest profit margin?](https://github.com/user-attachments/assets/d40fd3e5-7367-413e-aaa2-a202ca7f7860)
 
 * Steps
-Step 1. Add a new measure to calculate the average profit margin for each sales team 
+
+Step 1. Followed by the DAX expression to calculate the average profit margin for each sales team 
 
     Average Profit Margin = AVERAGEX('Sales Data', 'Sales Data'[Profit Margin])
 
-Step 2.	Create a Rank measure per the average profit margin:
+Step 2.	Create a DAX expression for Rank per the average profit margin:
 
     Rank by Profit Margin = RANKX(ALL('Sales Team'), [Average Profit Margin],,DESC)
 
 
-* Explanation: 
+* Explanation
+
 This visualisation displays the table of “Sales Team Ranking”, with columns of Sales Team, Rank by Profi Margin and the Average Profit Margin.
 I used the table as the data that is adopted to create the visualisation as it addresses the question that do not require many dataset and it is easier to understand. 
 
 To address the question, reader would be able to tell which of the sales team that performs from the best to the wost as the sales team rows corresponds to their rank that is based on their profit margin percentage (from over the total net sales amount). Additionally. The color-coded rows that clearly indicates the corresponding rank and profit margin. 
 As the Rank column  is sorted in descending order, this is used for a clear indication of the rank performance from each sales team as following ther Profit margin. 
 
-* Assumption: I assumed that the calculation of Profit margin would be the Total Net Sales – Sale cost / Total Net Sales, as this is a common expression to calculate the Profit Margin. 
+* Assumption 
 
-* Example analysis:
+I assumed that the calculation of Profit margin would be the Total Net Sales – Sale cost / Total Net Sales, as this is a common expression to calculate the Profit Margin. 
+
+* Example analysis
+
 Thus the answer of this question is the Jonathan Hawking sales team as the team is ranked first with the profit margin of 38%. 
 While the lowest performing sales team is Shaw Wallace ranked by 28 with the profit margin of only 35.5%. 
 
@@ -192,9 +202,11 @@ While the lowest performing sales team is Shaw Wallace ranked by 28 with the pro
 ## 4. Which warehouse(s) should be shut down?
 
 * Visualisation
+
 ![4. Which warehouse(s) should be shut down?](https://github.com/user-attachments/assets/c9e6498e-7567-47fc-9243-8a19cb62e7d0)
 
 * Steps
+
 Step 1.	Firstly, in the Store data, remove the DeliverDate ad ShipDate columns as this would not be relevant for this analysis. 
 
 Step 2.	Add a new measure to calculate the Total Profit        
@@ -212,11 +224,13 @@ Y-axis that contains the total net sales and total profit.
 The darker green bars on the chart indicates the total net sales made per warehous, while the lighter green bars indicates the total profit made by each warehouse.
 To make the decision of which warehouse to shut down, the reader can determine whether to prioritise making profit or the net sales, and therefore decided which of the warehouse to shut down. 
 
-* Example analysis: the stakeholder prioritizes profit, therefore the warehouse to shut down is WARE-NBV1002. (reminder: since this is a limited data and thus, in reality, this is not the only data we rely to calculate the worth of each warehouse)
+* Example analysis 
+the stakeholder prioritizes profit, therefore the warehouse to shut down is WARE-NBV1002. (reminder: since this is a limited data and thus, in reality, this is not the only data we rely to calculate the worth of each warehouse)
 
 ## 5. Do cities with a higher population have higher profit?
 
 * Visualisation
+
 ![5. Do cities with a higher population have higher profit?](https://github.com/user-attachments/assets/139313c7-5cb0-4d4b-b2dd-dbaf08d5cbee)
 
 * Step
@@ -233,7 +247,7 @@ To make the decision of which warehouse to shut down, the reader can determine w
 
 
 
-* Explanation: 
+* Explanation
 The first chart indicates a correlation plot with an integrated coding of R-Studio, as this software enable to add a correlation line to visually indicate relationship and R=-0.18, p = 0.35 to statistically indicate the relationship’s strength (correlation coefficient) between Population and the Total Profit.
 Therefore, we can determine whether there is a strong indication that when Profit increases, Population increase?
 Additionally, the y=24000-0.002x that indicates of the equation of the regression line, useful when there is additional data to calculate the specific value. 
@@ -242,7 +256,7 @@ Additional second chart contains the red shading within the chart, useful to ind
 X-axis indicating the total profits.
 Y-axis indicating the population.  
 
-* Example analysis: 
+* Example analysis
 Using the R=-0.18, p = 0.35 to indicate if there is relationship, since it is -0.18.then there is no correlation between City and population at all. 
 
 

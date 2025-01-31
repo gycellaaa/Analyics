@@ -54,7 +54,8 @@ HI
 
 
 
-## Dashboards answers to respective questions
+
+## Analysis to address the respective questions
 [1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?]( What-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021-2022?)  
 
  [2. Are there months in which sales of a particular product any of the states are significantly higher than others?](#methodology)  
@@ -65,12 +66,14 @@ HI
 
 [ 5. Do cities with a higher population have higher profit?](#)
 
-
 ## 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
 
 * Visualisation
-* ![Image](https://github.com/user-attachments/assets/a7c975bd-08a3-4991-b9c9-1e5bc27c22d6)
-* 
+  
+![1. What are the top 3 stores by total net sales amount for each of the year 2021](https://github.com/user-attachments/assets/cd2b6b5d-61fa-45ce-a19b-4916b9469bd4) 
+
+![1.2. What are the top 3 stores by total net sales amount for each of the year 2022?](https://github.com/user-attachments/assets/0f5b6f7f-ad81-4c15-8b4c-676197ff3194)
+
 * Steps
 Step 1.	Delete the irrelevant columns: 1.2 lat, 1.2 lng, iso2, iso 3, and ID. The ID doesn't represent stores id
 
@@ -114,6 +117,7 @@ the reference to the city would also enable further analysation of which store o
 Since this visual contains many datasets, I decided that it is efficient to provide one of the scenario analysis. 
 
 * Visualisation 
+![2. Are there months in which sales of a particular product in  any of the states are significantly higher than others?](https://github.com/user-attachments/assets/7b8d83f7-8ac2-4aee-bb14-b406d208ad3c)
 
 * Steps 
 Step 1. Changed the name of the column: admin_name to States, for a better indication of the states. 
@@ -158,6 +162,7 @@ The question does not indicate the year of requested months, therefore I decided
 
 ## 3 . Which sales team has the highest profit margin?
 * Visualisation
+![3. Which sales team has the highest profit margin?](https://github.com/user-attachments/assets/d40fd3e5-7367-413e-aaa2-a202ca7f7860)
 
 * Steps
 Step 1. Add a new measure to calculate the average profit margin for each sales team 
@@ -185,6 +190,7 @@ While the lowest performing sales team is Shaw Wallace ranked by 28 with the pro
 
 ## 4. Which warehouse(s) should be shut down? 
 * Visualisation
+![4. Which warehouse(s) should be shut down?](https://github.com/user-attachments/assets/c9e6498e-7567-47fc-9243-8a19cb62e7d0)
 
 * Steps
 Step 1.	Firstly, in the Store data, remove the DeliverDate ad ShipDate columns as this would not be relevant for this analysis. 
@@ -208,6 +214,7 @@ To make the decision of which warehouse to shut down, the reader can determine w
 
 ## 5. Do cities with a higher population have higher profit?
 * Visualisation
+![5. Do cities with a higher population have higher profit?](https://github.com/user-attachments/assets/139313c7-5cb0-4d4b-b2dd-dbaf08d5cbee)
 
 * Step
 #### (Though not directly related to data transformation, the visualisation adds up to create the relevant data). 

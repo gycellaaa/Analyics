@@ -56,6 +56,9 @@ HI
 
 
 ## Analysis to address the respective questions
+
+[The Power BI File](https://github.com/gycellaaa/Analyics/blob/main/A2_PowerBI.pbix)
+
 [1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?]( What-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021-2022?)  
 
  [2. Are there months in which sales of a particular product any of the states are significantly higher than others?](#methodology)  
@@ -66,16 +69,33 @@ HI
 
 [ 5. Do cities with a higher population have higher profit?](#)
 
+## Table of Contents  
+- [1. What are the top 3 stores by total net sales amount for each of the years 2021?](#1.-What-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021?)   
+
+- [Subsection 1](#subsection-1)  
+- [Subsection 2](#subsection-2)  
+- [Conclusion](#conclusion)  
+
+# Introduction  
+This section explains the background of the project.
+
+## Subsection 1  
+Details on data sources and preprocessing steps.
+
+## Subsection 2  
+An overview of the analytical approach.
+
+# Conclusion  
+Summary and next steps.
+
 ## 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
 
 * Visualisation
-  
 ![1. What are the top 3 stores by total net sales amount for each of the year 2021](https://github.com/user-attachments/assets/cd2b6b5d-61fa-45ce-a19b-4916b9469bd4) 
 
 ![1.2. What are the top 3 stores by total net sales amount for each of the year 2022?](https://github.com/user-attachments/assets/0f5b6f7f-ad81-4c15-8b4c-676197ff3194)
 
 * Steps
-  
 Step 1.	Delete the irrelevant columns: 1.2 lat, 1.2 lng, iso2, iso 3, and ID. The ID doesn't represent stores id
 
 Step 2.	renamed column 1 = to be stores ID, as data scanned from the Store_ID in the Sales Data makes more sense. 
@@ -112,6 +132,7 @@ The three stores of the year 2021 is:  Canberra with net sales of 294k, Lancesto
 Additonally, I have decided to refer the store name by it’s City, since each Store ID is column from Store data is dedicated to their different cities. Not only it would be more human-readable, 
 the reference to the city would also enable further analysation of which store of the city has made the total net sales from.
 
+# Introduction
 
 ## 2. Are there months in which sales of a particular product any of the states are significantly higher than others?
 

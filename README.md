@@ -61,36 +61,12 @@ HI
 
 [1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?]( What-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021-2022?)  
 
- [2. Are there months in which sales of a particular product any of the states are significantly higher than others?](#methodology)  
-
- [3. Which sales team has the highest profit margin?](#results)  
-
- [4. Which warehouse(s) should be shut down?](#which-warehouse(s)-should-be-shut-down?)
-
-[ 5. Do cities with a higher population have higher profit?](#)
-
-## Table of Contents  
-- [1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?](#1-what-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021-2022)
-
-
-## Table of Contents  
-- [Introduction](#introduction)  
-- [Subsection 1](#subsection-1)  
-- [Subsection 2](#subsection-2)  
-- [Conclusion](#conclusion) 
-
-
-# Introduction  
-This section explains the background of the project.
-
-## Subsection 1  
-Details on data sources and preprocessing steps.
-
-## Subsection 2  
-An overview of the analytical approach.
-
-# Conclusion   
-Summary and next steps.
+## Table of Contents
+- [1. What are the top 3 stores by total net sales amount for each of the years 2021?](#1-what-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021)
+- [2. Are there months in which sales of a particular product in any of the states are significantly higher than others?](#2-are-there-months-in-which-sales-of-a-particular-product-in-any-of-the-states-are-significantly-higher-than-others)
+- [3. Which sales team has the highest profit margin?](#3-which-sales-team-has-the-highest-profit-margin)
+- [4. Which warehouse(s) should be shut down?](#4-which-warehouses-should-be-shut-down)
+- [5. Do cities with a higher population have higher profit?](#5-do-cities-with-a-higher-population-have-higher-profit)
 
 ## 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
 
@@ -136,9 +112,7 @@ The three stores of the year 2021 is:  Canberra with net sales of 294k, Lancesto
 Additonally, I have decided to refer the store name by it’s City, since each Store ID is column from Store data is dedicated to their different cities. Not only it would be more human-readable, 
 the reference to the city would also enable further analysation of which store of the city has made the total net sales from.
 
-# Introduction
-
-## 2. Are there months in which sales of a particular product any of the states are significantly higher than others?
+## 2. Are there months in which sales of a particular product in any of the states are significantly higher than others?
 
 Since this visual contains many datasets, I decided that it is efficient to provide one of the scenario analysis. 
 
@@ -186,7 +160,8 @@ The question does not indicate the year of requested months, therefore I decided
 
 
 
-## 3 . Which sales team has the highest profit margin?
+## 3. Which sales team has the highest profit margin?
+
 * Visualisation
 ![3. Which sales team has the highest profit margin?](https://github.com/user-attachments/assets/d40fd3e5-7367-413e-aaa2-a202ca7f7860)
 
@@ -214,7 +189,8 @@ Thus the answer of this question is the Jonathan Hawking sales team as the team 
 While the lowest performing sales team is Shaw Wallace ranked by 28 with the profit margin of only 35.5%. 
 
 
-## 4. Which warehouse(s) should be shut down? 
+## 4. Which warehouse(s) should be shut down?
+
 * Visualisation
 ![4. Which warehouse(s) should be shut down?](https://github.com/user-attachments/assets/c9e6498e-7567-47fc-9243-8a19cb62e7d0)
 
@@ -239,6 +215,7 @@ To make the decision of which warehouse to shut down, the reader can determine w
 * Example analysis: the stakeholder prioritizes profit, therefore the warehouse to shut down is WARE-NBV1002. (reminder: since this is a limited data and thus, in reality, this is not the only data we rely to calculate the worth of each warehouse)
 
 ## 5. Do cities with a higher population have higher profit?
+
 * Visualisation
 ![5. Do cities with a higher population have higher profit?](https://github.com/user-attachments/assets/139313c7-5cb0-4d4b-b2dd-dbaf08d5cbee)
 

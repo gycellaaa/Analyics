@@ -16,7 +16,7 @@ Band
 % of Gross Sale
 NIL
 0%
-LOW
+LOWa
 1%
 MED
 2%
@@ -32,11 +32,11 @@ HI
 ## What to do?
 ### A. Use PowerBI Desktop to create visualisations that will help to answer each of the following questions:
 
-1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
-2. Are there months in which sales of a particular product any of the states are significantly higher than others?
-3. Which sales team has the highest profit margin?
-4. Which warehouse(s) should be shut down?
-5. Do cities with a higher population have higher profit?
+#### 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
+#### 2. Are there months in which sales of a particular product any of the states are significantly higher than others?
+#### 3. Which sales team has the highest profit margin?
+#### 4. Which warehouse(s) should be shut down?
+#### 5. Do cities with a higher population have higher profit?
 
 ### B. Write an explanation of how your visualisation (or visualisations) addresses each of the questions (i.e., five explanations of no more than 1 page each). 
        
@@ -50,49 +50,53 @@ HI
     Please note, this is focused on your data transformation, not the processes for creating your visualisations.
     
 *
-    [The Raw Data Spreadsheet link](https://curtin-my.sharepoint.com/:x:/r/personal/21569498_student_curtin_edu_au/Documents/Sales%20Orders.xlsx?d=w475def7f80b64d3aa2981c793f059db9&csf=1&web=1&e=pkHKyO) 
+    [The Raw Data Set CSV link](https://curtin-my.sharepoint.com/:x:/r/personal/21569498_student_curtin_edu_au/Documents/Sales%20Orders.xlsx?d=w475def7f80b64d3aa2981c793f059db9&csf=1&web=1&e=pkHKyO) 
 
 
 
 
 ## Analysis to address the respective questions
-[The Power BI File link](https://github.com/gycellaaa/Analyics/blob/main/A2_PowerBI.pbix)
-
 - [What are the top 3 stores by total net sales amount for each of the years 2021?](#1-what-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021)
 - [Are there months in which sales of a particular product in any of the states are significantly higher than others?](#2-are-there-months-in-which-sales-of-a-particular-product-in-any-of-the-states-are-significantly-higher-than-others)
 - [Which sales team has the highest profit margin?](#3-which-sales-team-has-the-highest-profit-margin)
 - [Which warehouse(s) should be shut down?](#4-which-warehouses-should-be-shut-down)
 - [Do cities with a higher population have higher profit?](#5-do-cities-with-a-higher-population-have-higher-profit)
 
+* [The Power BI File link](https://github.com/gycellaaa/Analyics/blob/main/A2_PowerBI.pbix)
+
+
 ## 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
 
 * Visualisation
 
+Year 2021
 ![1. What are the top 3 stores by total net sales amount for each of the year 2021](https://github.com/user-attachments/assets/cd2b6b5d-61fa-45ce-a19b-4916b9469bd4) 
 
 
+Year 2022
 ![1.2. What are the top 3 stores by total net sales amount for each of the year 2022?](https://github.com/user-attachments/assets/0f5b6f7f-ad81-4c15-8b4c-676197ff3194)
 
 * Steps
 
-Step 1.	Delete the irrelevant columns: 1.2 lat, 1.2 lng, iso2, iso 3, and ID. The ID doesn't represent stores id
+Step 1. Remove non-essential columns from the dataset: specifically, 1.2 lat, 1.2 lng, iso2, iso3, and ID. Note that the ID column does not correspond to stores id.
 
-Step 2.	renamed column 1 = to be stores ID, as data scanned from the Store_ID in the Sales Data makes more sense. 
+Step 2.	renamed column 1 = to be stores ID, as data scanned from the Store_ID in the Sales Data as it is appropriate. 
 Instead of using the Store ID as reference, it would be more appropriate to transform the Store ID as the City names as it would be easier for stakeholders to understand better the stores represented by the City.
 
-Step 3. I adjusted few of the data types accordingly
+Step 3. Adjust the rest of data types accordingly
 
 Step 4. Add a conditional column to transform the Discount Band to the Discount Band Percentage per the description to change the value of Nil to %, LOW to 1%, MED to 2% and HI to 5%. 
 
-Step 5. In order to find out the find out the total net sales amount, we need to calculate the Total Gross Sales amount. I use the Custom Column option to add a new column to multiply the Order Quantity and the Item Price in the sales data. 
+Step 5. To determine the total net sales amount, we first need to compute the Total Gross Sales. I utilize the Custom Column feature for this calculation.
 
 Step 6. Create a column to calculate the Discount band Multiplied with the Total Gross Sales amount. 
-Named the column of this multiplication as 
+Named the column of this multiplication as "Discount Total".
     
     "Discount Total" = Total Gross Sale= [Total Gross Sale] *[Discount Band Percentage]
 
-Step 7.  Finally, The Total Net Sales across the total Gross Sales and the Discount Total for all rows in the table. 
-The formula to calculate the Total Net Sale(s) amount using the DAX expression: 
+Step 7. Lastly, calculate the Total Net Sales by subtracting the Discount Total from the Gross Sales across all entries in the table.
+
+The formula to calculate the Total Net Sale(s) amount using DAX expression: 
 
     Total Net Sales = SUM('Sales Data'[Total Gross Sales]) - SUM('Sales Data'[Discount Total])
 
@@ -105,18 +109,18 @@ Each column’s length corresponds to the net sales amount, and the additonal va
 When one of the slicer’s year option is chosen, it enabels simple comparison of the total net sales made by the three stores within the dedicated year.
 With an integrated tooltip as a storytelling function that provides a compact view of the store, net sales and the year when navigating through specific value. Not only is assists with data filter, it provides a straightforward user-friendly interface for data exploration. It functions to tell a story and guide the reader for quick data-driven decison making. 
 
-* Assumption
-
-Additonally, I have decided to refer the store name by it’s City, since each Store ID is column from Store data is dedicated to their different cities. Not only it would be more human-readable, 
-the reference to the city would also enable further analysation of which store of the city has made the total net sales from.
-
 * Example analysis
 
 The three stores of the year 2021 is:  Canberra with net sales of 294k, Lanceston store with net sales of 302k, Toowomba with net sales of 298k.
 
+* Assumption
+
+I have chosen to refer store names by their respective cities, as each Store ID corresponds to a specific city in the Store data. This approach enhances readability and facilitates a more detailed analysis of total net sales attributed to each store within a city. By using city names, we can more easily assess and compare performance metrics across different locations.
+
 ## 2. Are there months in which sales of a particular product in any of the states are significantly higher than others?
 
-Since this visual contains many datasets, I decided that it is efficient to provide one of the scenario analysis. 
+    Given the complexity of the visual, which encompasses multiple datasets, 
+    I have opted to present a focused scenario analysis for efficiency and clarity.
 
 * Visualisation 
 
@@ -124,9 +128,10 @@ Since this visual contains many datasets, I decided that it is efficient to prov
 
 * Steps 
 
-Step 1. Changed the name of the column: admin_name to States, for a better indication of the states. 
+Step 1. Renamed the column "admin_name" to "States" for enhanced clarity regarding the geographic data represented.
 
-Step 2. Created the new column for the Total Net Sale of each product to enable Sales Median calculation (this is different with the Total Net Sale(s) since the Total Net Sale only focus each product’s net sales instead of the net sales across all of the summed up net sales and all summed up discount total)
+Step 2. Introduced a new column to capture the Total Net Sale for each product, facilitating the calculation of Sales Median.
+ It is important to differentiate this from the overall Total Net Sale, which aggregates individual product net sales rather than encompassing the cumulative net sales and total discounts across all products.
 
     Total Net Sale = [Total Gross Sales]-[Discount Total]
 
@@ -134,7 +139,7 @@ Step 3. Created a new DAX expression for the Sales Median
 
     Sales Median = CALCULATE(MEDIAN('Sales Data'[Total Net Sale]))
 
-* Explanation 
+* Description 
 
 The visualisation displays a line and column clustered chart “Total Net Sasles of product by Months”  to determine the months in which sales of specific product in the different states shows the significant variances  from overall net sales performance. 
 The reason I use Line and clustered column chart is that not only it depicts the trend over months 
@@ -258,3 +263,7 @@ Y-axis indicating the population.
 
 * Example analysis
 Using the R=-0.18, p = 0.35 to indicate if there is relationship, since it is -0.18.then there is no correlation between City and population at all. 
+
+
+## Acknowledgments  
+Special thanks to [Danny Toohey] for providing the assignment details and guidance.  

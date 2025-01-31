@@ -75,7 +75,7 @@ HI
 ![1.2. What are the top 3 stores by total net sales amount for each of the year 2022?](https://github.com/user-attachments/assets/0f5b6f7f-ad81-4c15-8b4c-676197ff3194)
 
 * Steps
-* 
+  
 Step 1.	Delete the irrelevant columns: 1.2 lat, 1.2 lng, iso2, iso 3, and ID. The ID doesn't represent stores id
 
 Step 2.	renamed column 1 = to be stores ID, as data scanned from the Store_ID in the Sales Data makes more sense. 

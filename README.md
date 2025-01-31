@@ -69,6 +69,8 @@ HI
 ## 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
 
 * Visualisation
+* ![Image](https://github.com/user-attachments/assets/a7c975bd-08a3-4991-b9c9-1e5bc27c22d6)
+* 
 * Steps
 Step 1.	Delete the irrelevant columns: 1.2 lat, 1.2 lng, iso2, iso 3, and ID. The ID doesn't represent stores id
 

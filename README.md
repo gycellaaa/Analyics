@@ -72,9 +72,13 @@ HI
 ## Table of Contents  
 - [1. What are the top 3 stores by total net sales amount for each of the years 2021?](#1.-What-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021?)   
 
+
+## Table of Contents  
+- [Introduction](#introduction)  
 - [Subsection 1](#subsection-1)  
 - [Subsection 2](#subsection-2)  
-- [Conclusion](#conclusion)  
+- [Conclusion](#conclusion) 
+
 
 # Introduction  
 This section explains the background of the project.
@@ -85,7 +89,7 @@ Details on data sources and preprocessing steps.
 ## Subsection 2  
 An overview of the analytical approach.
 
-# Conclusion  
+# Conclusion   
 Summary and next steps.
 
 ## 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?

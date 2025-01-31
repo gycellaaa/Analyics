@@ -70,7 +70,7 @@ HI
 [ 5. Do cities with a higher population have higher profit?](#)
 
 ## Table of Contents  
-- [1. What are the top 3 stores by total net sales amount for each of the years 2021?](#1.-What-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021?)   
+- [1. What are the top 3 stores by total net sales amount for each of the years 2021?](#1-what-are-the-top-3-stores-by-total-net-sales-amount-for-each-of-the-years-2021)
 
 
 ## Table of Contents  
@@ -92,7 +92,7 @@ An overview of the analytical approach.
 # Conclusion   
 Summary and next steps.
 
-## 1. What are the top 3 stores by total net sales amount for each of the years 2021-2022?
+## 1. What are the top 3 stores by total net sales amount for each of the years 2021?
 
 * Visualisation
 ![1. What are the top 3 stores by total net sales amount for each of the year 2021](https://github.com/user-attachments/assets/cd2b6b5d-61fa-45ce-a19b-4916b9469bd4) 

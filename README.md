@@ -70,10 +70,12 @@ HI
 * Visualisation
 
 Year 2021
+
 ![1. What are the top 3 stores by total net sales amount for each of the year 2021](https://github.com/user-attachments/assets/cd2b6b5d-61fa-45ce-a19b-4916b9469bd4) 
 
 
 Year 2022
+
 ![1.2. What are the top 3 stores by total net sales amount for each of the year 2022?](https://github.com/user-attachments/assets/0f5b6f7f-ad81-4c15-8b4c-676197ff3194)
 
 * Steps
@@ -228,7 +230,7 @@ If the stakeholder prioritizes profitability, the analysis suggests that warehou
 ![5. Do cities with a higher population have higher profit?](https://github.com/user-attachments/assets/139313c7-5cb0-4d4b-b2dd-dbaf08d5cbee)
 
 * Step
-#### (Though not directly related to data transformation, the visualisation adds up to create the relevant data). 
+* (Though not directly related to data transformation, the visualisation adds up to create the relevant data). 
  
  Step 1. Using the R Script visual to add a line trend & precise coordinates: 
 

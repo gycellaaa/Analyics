@@ -230,7 +230,8 @@ If the stakeholder prioritizes profitability, the analysis suggests that warehou
 ![5. Do cities with a higher population have higher profit?](https://github.com/user-attachments/assets/139313c7-5cb0-4d4b-b2dd-dbaf08d5cbee)
 
 * Step
-* (Though not directly related to data transformation, the visualisation adds up to create the relevant data). 
+
+    (Though not directly related to data transformation, the visualisation adds up to create the relevant data). 
  
  Step 1. Using the R Script visual to add a line trend & precise coordinates: 
 
